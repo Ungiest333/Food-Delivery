@@ -1,0 +1,119 @@
+
+
+.create-food-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: var(--background, #fff);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow, 0 2px 8px rgba(0,0,0,0.05));
+}
+
+.create-food-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  color: var(--primary-color, #222);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.form-label {
+  font-size: 1rem;
+  color: var(--text-color, #333);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.form-input {
+  padding: 0.7rem;
+  border: 1px solid var(--border-color, #ddd);
+  border-radius: 5px;
+  font-size: 1rem;
+  background: var(--input-bg, #fafafa);
+}
+
+.form-input[type="file"] {
+  padding: 0.3rem 0;
+}
+
+.form-button {
+  padding: 0.9rem;
+  background: var(--accent-color, #ff6600);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-button:hover {
+  background: var(--accent-hover, #e65c00);
+}
+
+@media (max-width: 600px) {
+  .create-food-container {
+    padding: 1rem;
+    max-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .form-title {
+    font-size: 1.2rem;
+  }
+  /* ...existing code... */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.video-upload-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  background: var(--input-bg, #fafafa);
+  border: 1px solid var(--border-color, #ddd);
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--primary-color, #222);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  margin-top: 0.3rem;
+}
+
+.video-upload-btn:hover,
+.video-upload-btn:focus {
+  background: var(--accent-color, #ff6600);
+  color: #fff;
+  border-color: var(--accent-color, #ff6600);
+}
+
+.video-upload-icon {
+  display: flex;
+  align-items: center;
+  color: var(--accent-color, #ff6600);
+  transition: color 0.2s;
+}
+
+.video-upload-btn:hover .video-upload-icon,
+.video-upload-btn:focus .video-upload-icon {
+  color: #fff;
+}
+
+/* ...existing code... */
+}

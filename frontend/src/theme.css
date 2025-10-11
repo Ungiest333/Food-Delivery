@@ -1,0 +1,19 @@
+/* Centralized theme variables for light and dark mode */
+:root {
+  --color-bg: #f9f9f9;
+  --color-text: #222;
+  --color-primary: #4f8cff;
+  --color-border: #e0e0e0;
+  --color-input-bg: #fff;
+  --color-input-text: #222;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #181818;
+    --color-text: #f9f9f9;
+    --color-primary: #4f8cff;
+    --color-border: #333;
+    --color-input-bg: #222;
+    --color-input-text: #f9f9f9;
+  }
+}
