@@ -7,7 +7,7 @@ const Saved = () => {
   const [savedItems, setSavedItems] = useState([]);
   const videoRefs = useRef([]);
 
-  // Fetch saved items from localStorage or API on mount
+  // Fetch saved items from localStorage or API on mount for demo, using static data
   useEffect(() => {
    const response = axios.get('https://food-delivery-vigr.onrender.com/api/food/save', { withCredentials: true })
    .then(response=>{
