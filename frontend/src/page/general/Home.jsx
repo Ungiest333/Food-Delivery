@@ -46,7 +46,7 @@ const Home = () => {
   // --- Fetch reels ---
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/food", { withCredentials: true })
+      .get("https://food-delivery-vigr.onrender.com/api/food", { withCredentials: true })
       .then((res) =>
         setReels(Array.isArray(res.data.foodItems) ? res.data.foodItems : [])
       )
@@ -58,7 +58,7 @@ const Home = () => {
     if (!foodId) return;
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/food/${foodId}/comments`,
+        `https://food-delivery-vigr.onrender.com/api/food/${foodId}/comments`,
         { withCredentials: true }
       );
       setComments((prev) => ({
@@ -84,7 +84,7 @@ const Home = () => {
   const likeVideo = async (reel) => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/food/like",
+        "https://food-delivery-vigr.onrender.com/api/food/like",
         { foodId: reel._id },
         { withCredentials: true }
       );
@@ -109,7 +109,7 @@ const Home = () => {
   const saveVideo = async (reel) => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/food/save",
+        "https://food-delivery-vigr.onrender.com/api/food/save",
         { foodId: reel._id },
         { withCredentials: true }
       );
@@ -125,7 +125,7 @@ const Home = () => {
     if (!commentText.trim()) return;
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/food/${reel._id}/comments`,
+        `https://food-delivery-vigr.onrender.com/api/food/${reel._id}/comments`,
         { text: commentText },
         { withCredentials: true }
       );
@@ -144,7 +144,7 @@ const Home = () => {
   const handleDeleteComment = async (reel, commentId) => {
     try {
       await axios.delete(
-        `http://localhost:3000/api/food/${reel._id}/comments/${commentId}`,
+        `https://food-delivery-vigr.onrender.com/api/food/${reel._id}/comments/${commentId}`,
         { withCredentials: true }
       );
       setComments((prev) => ({
@@ -167,7 +167,7 @@ const Home = () => {
     if (!editText.trim()) return;
     try {
       const res = await axios.put(
-        `http://localhost:3000/api/food/${reel._id}/comments/${commentId}`,
+        `https://food-delivery-vigr.onrender.com/api/food/${reel._id}/comments/${commentId}`,
         { text: editText },
         { withCredentials: true }
       );

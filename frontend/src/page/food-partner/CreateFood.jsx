@@ -30,7 +30,7 @@ const CreateFood = () => {
       formData.append('name', name);
       formData.append('description', description);
 
-      const response = await axios.post('http://localhost:3000/api/food', formData, {
+      const response = await axios.post('https://food-delivery-vigr.onrender.com/api/food', formData, {
         withCredentials: true,
       });
 

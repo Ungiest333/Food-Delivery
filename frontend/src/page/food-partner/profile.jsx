@@ -10,7 +10,7 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/food-partner/${id}`, { withCredentials: true })
+      .get(`https://food-delivery-vigr.onrender.com/api/food-partner/${id}`, { withCredentials: true })
       .then((res) => {
         setProfile(res.data.foodPartner);
         setVideos(res.data.foodPartner.videos); // safer

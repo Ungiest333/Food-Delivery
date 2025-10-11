@@ -29,7 +29,7 @@ export default function UserRegister() {
     }
 
     try {
-      const res = await axios.post("http://localhost:3000/api/auth/user/register", {
+      const res = await axios.post("https://food-delivery-vigr.onrender.com/api/auth/user/register", {
         fullName: firstName + " " + lastName,
         email,
         password,

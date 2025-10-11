@@ -14,7 +14,7 @@ export default function PartnerLogin() {
 
     try {
       const response = await axios.post(
-  "http://localhost:3000/api/auth/foodpartner/login",
+  "https://food-delivery-vigr.onrender.com/api/auth/foodpartner/login",
   { email, password },
   { withCredentials: true }
 );

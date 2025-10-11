@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api/comments"; // Change if needed
+const API_URL = "https://food-delivery-vigr.onrender.com/api/comments"; // Change if needed
 
 export const fetchComments = async (foodId, token) => {
   try {

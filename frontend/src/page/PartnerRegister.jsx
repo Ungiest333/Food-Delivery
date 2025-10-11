@@ -17,7 +17,7 @@ export default function PartnerRegister() {
 
   try {
     const response = await axios.post(
-      "http://localhost:3000/api/auth/foodpartner/register", 
+      "https://food-delivery-vigr.onrender.com/api/auth/foodpartner/register", 
       { contactName, restaurantName, address, phone, email, password, confirmPassword },
       { withCredentials: true }
     );

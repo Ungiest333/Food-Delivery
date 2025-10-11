@@ -9,7 +9,7 @@ const Saved = () => {
 
   // Fetch saved items from localStorage or API on mount
   useEffect(() => {
-   const response = axios.get('http://localhost:3000/api/food/save', { withCredentials: true })
+   const response = axios.get('https://food-delivery-vigr.onrender.com/api/food/save', { withCredentials: true })
    .then(response=>{
 
    const savedFoods = response.data.savedFoods.map((item) => ({
