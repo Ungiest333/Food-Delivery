@@ -4,7 +4,7 @@
   padding: 24px;
   background: linear-gradient(120deg, #fff 70%, #ffe0b2 100%);
   /* border-radius: 24px; */
-  box-shadow: 0 8px 32px rgba(255, 152, 0, 0.10), 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 32px rgba(255, 152, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -101,7 +101,7 @@
   font-size: 1.4rem;
   font-weight: bold;
   color: #222;
-  text-shadow: 0 2px 8px rgba(255, 152, 0, 0.10);
+  text-shadow: 0 2px 8px rgba(255, 152, 0, 0.1);
 }
 
 .partner-profile-divider {
@@ -121,7 +121,7 @@
   background: linear-gradient(120deg, #fff3e0 70%, #ffe0b2 100%);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(255, 152, 0, 0.10);
+  box-shadow: 0 2px 12px rgba(255, 152, 0, 0.1);
   display: flex;
   flex-direction: column;
   transition: box-shadow 0.2s, transform 0.2s;

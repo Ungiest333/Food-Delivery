@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './Home.css'; // reuse styles
-import axios from 'axios';
-import ReelVideo from '../../components/ReelVideo';
+import React, { useEffect, useRef, useState } from "react";
+import "./Home.css"; // reuse styles
+import axios from "axios";
+import ReelVideo from "../../components/ReelVideo";
 
 const Saved = () => {
   const [savedItems, setSavedItems] = useState([]);
@@ -9,25 +9,21 @@ const Saved = () => {
 
   // Fetch saved items from localStorage or API on mount for demo, using static data
   useEffect(() => {
-   const response = axios.get('https://food-delivery-vigr.onrender.com/api/food/save', { withCredentials: true })
-   .then(response=>{
-
-   const savedFoods = response.data.savedFoods.map((item) => ({
-    _id: item.food._id,
-    video: item.food.video,
-    description: item.food.description,
-    likes: item.food.likeCount || 0,
-    saves: item.food.saveCount || 0,
-
-   })
-   
-   
-  )
-    setSavedItems(savedFoods);
-})
-
-  }, [])
-
+    const response = axios
+      .get("https://food-delivery-vigr.onrender.com/api/food/save", {
+        withCredentials: true,
+      })
+      .then((response) => {
+        const savedFoods = response.data.savedFoods.map((item) => ({
+          _id: item.food._id,
+          video: item.food.video,
+          description: item.food.description,
+          likes: item.food.likeCount || 0,
+          saves: item.food.saveCount || 0,
+        }));
+        setSavedItems(savedFoods);
+      });
+  }, []);
 
   // Auto-pause all videos except the first one
   useEffect(() => {
@@ -47,11 +43,7 @@ const Saved = () => {
       {savedItems && savedItems.length > 0 ? (
         savedItems.map((item, idx) => (
           <div className="reel" key={idx}>
-            <ReelVideo
-              src={item.video}
-              autoPlay={idx === 0}
-              controls
-            />
+            <ReelVideo src={item.video} autoPlay={idx === 0} controls />
             <div className="reel-content">
               <div className="reel-description">{item.description}</div>
             </div>

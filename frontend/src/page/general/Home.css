@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .home-header {
@@ -23,13 +23,10 @@
 
 .home-logo {
   margin-top: 30px;
-    width: 150px;
-    height: 84px;
-    object-fit: contain;
+  width: 150px;
+  height: 84px;
+  object-fit: contain;
 }
-
-
-
 
 body {
   background-color: #f2f2f2;
@@ -104,7 +101,7 @@ body {
   padding: 0.75rem 2rem;
   font-size: 1.4rem;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 2rem;
   text-decoration: none;
 }
@@ -116,12 +113,12 @@ body {
   right: 0;
   bottom: 0;
   height: 69px;
-  background: var(--background,  #ff6600);
+  background: var(--background, #ff6600);
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-radius: 15px 15px 0 0;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
   z-index: 10;
 }
 
@@ -149,7 +146,7 @@ body {
 
 .reel-actions {
   position: absolute;
- left:5px;
+  left: 5px;
   top: 50%;
   transform: translateY(-220%);
   display: flex;
@@ -183,10 +180,11 @@ body {
 
 /* ...existing code... */
 /* ...existing code... */
-.icon-btn svg, .nav-btn svg {
+.icon-btn svg,
+.nav-btn svg {
   transition: transform 0.2s, box-shadow 0.2s;
   border-radius: 50%;
-  color:white;
+  color: white;
   box-shadow: 0 2px 8px rgba(255, 251, 251, 0.08);
   /* background: #fff; */
 }
@@ -196,10 +194,11 @@ body {
 .nav-btn:hover svg,
 .nav-btn:focus svg {
   transform: scale(1.15);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
 }
 
-.icon-btn, .nav-btn {
+.icon-btn,
+.nav-btn {
   background: none;
   border: none;
   display: flex;
@@ -222,12 +221,13 @@ body {
   transition: color 0.2s;
 }
 
-.icon-label, .nav-label {
+.icon-label,
+.nav-label {
   font-size: 1.1rem;
   margin-top: 0.2rem;
   margin-left: 0.2rem;
 }
-/* ...existing code... *//* Comment section */
+/* ...existing code... */ /* Comment section */
 .reel-comments {
   position: absolute;
   bottom: 100px; /* slightly above the comment icon */
@@ -277,7 +277,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   /* align-items: center; */
@@ -305,7 +305,7 @@ body {
   background: #fff;
   width: 100%;
   max-width: 600px;
-  max-height:100%;
+  max-height: 100%;
   border-radius: 20px 20px 0 0; /* rounded top corners */
   display: flex;
   flex-direction: column;
@@ -315,7 +315,7 @@ body {
 
 /* Drag indicator (like Instagram) */
 .comment-dialog::before {
-  content: '';
+  content: "";
   width: 40px;
   height: 4px;
   background: #ccc;

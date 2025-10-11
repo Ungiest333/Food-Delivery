@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import './profile.css';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import "./profile.css";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const Profile = () => {
   const { id } = useParams();
@@ -10,12 +10,14 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get(`https://food-delivery-vigr.onrender.com/api/food-partner/${id}`, { withCredentials: true })
+      .get(`https://food-delivery-vigr.onrender.com/api/food-partner/${id}`, {
+        withCredentials: true,
+      })
       .then((res) => {
         setProfile(res.data.foodPartner);
         setVideos(res.data.foodPartner.videos); // safer
       })
-      .catch((err) => console.error('Failed to fetch profile:', err));
+      .catch((err) => console.error("Failed to fetch profile:", err));
   }, [id]);
 
   return (
@@ -45,28 +47,35 @@ const Profile = () => {
       <div className="partner-profile-stats">
         <div className="partner-profile-stat">
           <span className="partner-profile-stat-label">Total Meal</span>
-          <span className="partner-profile-stat-value">{profile?.totalMeals}</span>
+          <span className="partner-profile-stat-value">
+            {profile?.totalMeals}
+          </span>
         </div>
         <div className="partner-profile-stat">
           <span className="partner-profile-stat-label">Customer Served</span>
-          <span className="partner-profile-stat-value">{profile?.customerServe}</span>
+          <span className="partner-profile-stat-value">
+            {profile?.customerServe}
+          </span>
         </div>
       </div>
 
       <hr className="partner-profile-divider" />
 
       <div className="partner-profile-meals">
-  {(!videos || videos.length === 0) ? (
-    <p>No videos uploaded yet.</p>
-  ) : (
-    videos.map((video, index) => (
-      <div key={index} className="partner-profile-meal-card">
-       <video src={video?.url || ''} controls className="partner-profile-meal-video" />
+        {!videos || videos.length === 0 ? (
+          <p>No videos uploaded yet.</p>
+        ) : (
+          videos.map((video, index) => (
+            <div key={index} className="partner-profile-meal-card">
+              <video
+                src={video?.url || ""}
+                controls
+                className="partner-profile-meal-video"
+              />
+            </div>
+          ))
+        )}
       </div>
-    ))
-  )}
-</div>
-
     </div>
   );
 };

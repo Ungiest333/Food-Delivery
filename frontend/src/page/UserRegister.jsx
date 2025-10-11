@@ -1,10 +1,9 @@
 import React from "react";
 import "../App.css";
 import axios from "axios";
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function UserRegister() {
-    
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -17,7 +16,6 @@ export default function UserRegister() {
     const password = e.target.password.value.trim();
     const confirmPassword = e.target.confirmPassword.value.trim();
 
-    
     if (!firstName || !lastName || !email || !password) {
       alert("Please fill all required fields");
       return;
@@ -29,20 +27,23 @@ export default function UserRegister() {
     }
 
     try {
-      const res = await axios.post("https://food-delivery-vigr.onrender.com/api/auth/user/register", {
-        fullName: firstName + " " + lastName,
-        email,
-        password,
-        phone,
-        confirmPassword,
-      }, {
-        withCredentials: true
-      });
+      const res = await axios.post(
+        "https://food-delivery-vigr.onrender.com/api/auth/user/register",
+        {
+          fullName: firstName + " " + lastName,
+          email,
+          password,
+          phone,
+          confirmPassword,
+        },
+        {
+          withCredentials: true,
+        }
+      );
 
       console.log("Registered successfully:", res.data);
-      navigate("/")
+      navigate("/");
       alert("Registration successful!");
-    
     } catch (err) {
       console.error(" Registration error:", err.response?.data || err.message);
       alert(err.response?.data?.message || "Something went wrong");
@@ -56,12 +57,22 @@ export default function UserRegister() {
 
         <div className="input-group">
           <label htmlFor="firstName">First Name</label>
-          <input type="text" id="firstName" name="firstName" autoComplete="given-name" />
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            autoComplete="given-name"
+          />
         </div>
 
         <div className="input-group">
           <label htmlFor="lastName">Last Name</label>
-          <input type="text" id="lastName" name="lastName" autoComplete="family-name" />
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            autoComplete="family-name"
+          />
         </div>
 
         <div className="input-group">
@@ -76,16 +87,30 @@ export default function UserRegister() {
 
         <div className="input-group">
           <label htmlFor="password">Password</label>
-          <input type="password" id="password" name="password" autoComplete="new-password" />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autoComplete="new-password"
+          />
         </div>
 
         <div className="input-group">
           <label htmlFor="confirmPassword">Confirm Password</label>
-          <input type="password" id="confirmPassword" name="confirmPassword" autoComplete="new-password" />
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            autoComplete="new-password"
+          />
         </div>
 
-        <button className="button" type="submit">Register</button>
-        <a className="link" href="/user/login">Already have an account? Login</a>
+        <button className="button" type="submit">
+          Register
+        </button>
+        <a className="link" href="/user/login">
+          Already have an account? Login
+        </a>
       </form>
     </div>
   );

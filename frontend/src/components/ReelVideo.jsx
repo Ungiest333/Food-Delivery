@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from "react";
 
 const ReelVideo = ({ src, autoPlay = false, ...props }) => {
   const videoRef = useRef(null);
