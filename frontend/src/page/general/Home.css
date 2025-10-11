@@ -28,20 +28,11 @@
     object-fit: contain;
 }
 
-/* .home-title {
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-} */
-/* 
-.reels-container {
-  margin-top: 70px; /* so reels don't go under the header */
-*/
+
 
 
 body {
-  background-color: #f2f2f2; /* light gray background like Instagram */
+  background-color: #f2f2f2;
   color: #000;
   font-size: 16px;
   line-height: 1.5;
