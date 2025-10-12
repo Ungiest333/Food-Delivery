@@ -419,3 +419,35 @@ body {
     opacity: 1;
   }
 }
+
+
+.home {
+  display: flex;
+  flex-direction: column; /* stack h1 and button vertically */
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
+  height: 100vh;           /* full screen height */
+  text-align: center;      /* center text */
+  background-color: #f8f9fa; /* optional light background */
+}
+
+.home h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.home .btn {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.home .btn:hover {
+  background-color: #e64a19;
+}

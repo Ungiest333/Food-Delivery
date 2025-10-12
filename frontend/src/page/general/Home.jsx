@@ -194,6 +194,17 @@ const Home = () => {
         {/* <h2 className="home-title">FOOODOOO</h2> */}
       </header>
 
+       <div className="home">
+      <h1>Welcome to Food reel 🍴</h1>
+      <Link to="/user/register">
+        <button className="btn">Register as User</button>
+      </Link>
+      <br />
+      <Link to="/food-partner/register">
+        <button className="btn">Register as a Food Partener</button>
+      </Link>
+    </div>
+
       <div className="reels-container" ref={containerRef}>
         {reels.length > 0 ? (
           reels.map((reel, idx) => (
