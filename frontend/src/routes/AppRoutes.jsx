@@ -7,7 +7,7 @@ import PartnerLogin from "../page/PartnerLogin";
 import Home from "../page/general/Home";
 import CreateFood from "../page/food-partner/CreateFood";
 import Profile from "../page/food-partner/profile";
-import Saved from "../page/general/Saved";
+import Saved from "../page/general/Saved.jsx";
 import Comment from "../page/general/commentReel";
 const AppRouter = () => {
   return (
