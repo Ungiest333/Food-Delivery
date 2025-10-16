@@ -34,8 +34,8 @@ async function registerUser(req, res) {
       confirmPassword: hashedPassword
     });
 
-    // const token = generateToken(user._id);
-    // console.log(token)
+    const token = generateToken(user._id);
+    console.log(token)
     // res.cookie("token", token, { httpOnly: true });
 
     console.log('UPDATED')
