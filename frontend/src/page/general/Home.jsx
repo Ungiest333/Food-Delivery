@@ -47,6 +47,11 @@ const Home = () => {
     axios
       .get("https://food-delivery-vigr.onrender.com/api/food", {
         withCredentials: true,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': 'true'
+        }
       })
       .then((res) =>
         setReels(Array.isArray(res.data.foodItems) ? res.data.foodItems : [])
