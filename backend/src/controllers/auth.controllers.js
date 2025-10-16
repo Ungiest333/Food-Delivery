@@ -5,7 +5,6 @@ const jwt = require("jsonwebtoken");
 
 // Helper to sign JWT
 function generateToken(id) {
-  console.log('process.env', process.env)
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "1d" });
 }
 
@@ -36,10 +35,7 @@ async function registerUser(req, res) {
     });
 
     const token = generateToken(user._id);
-    console.log(token)
-    // res.cookie("token", token, { httpOnly: true });
-
-    console.log('UPDATED')
+    res.cookie("token", token, { httpOnly: true });
 
     res.status(201).json({
       success:true,
